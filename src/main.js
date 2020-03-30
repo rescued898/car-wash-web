@@ -3,51 +3,20 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
+import '@/styles/index.scss'
+
 //import Vant from 'vant';
 //import 'vant/lib/index.css';
 //Vue.use(Vant);
 
 import {
-  Button,
-  Cell,
-  CellGroup,
-  Icon,
-  Image,
-  Col,
-  Row,
-  Popup,
+  Button, Cell, CellGroup, Icon, Image, Col, Row, Popup,
 
-  Calendar,
-  Checkbox,
-  CheckboxGroup,
-  DatetimePicker,
-  Field,
-  Form,
-  NumberKeyboard,
-  PasswordInput,
-  Picker,
-  RadioGroup,
-  Radio,
-  Rate,
-  Search,
-  Slider,
-  Stepper,
-  Switch,
-  Uploader,
+  Calendar, Checkbox, CheckboxGroup, DatetimePicker, Field, Form, NumberKeyboard, PasswordInput, Picker, RadioGroup, Radio, Rate, Search, Slider, Stepper, Switch, Uploader,
+  
+  ActionSheet, Dialog, DropdownMenu, DropdownItem, Loading, Notify, Overlay, PullRefresh, SwipeCell, Toast,
 
-  ActionSheet,
-  Dialog,
-  DropdownMenu,
-  DropdownItem,
-  Loading,
-  Notify,
-  Overlay,
-  PullRefresh,
-  SwipeCell,
-  Toast,
-
-  Tabbar,
-  TabbarItem
+  Tabbar, TabbarItem
 } from 'vant'
 
 [
