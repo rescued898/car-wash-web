@@ -1,46 +1,46 @@
 <template>
   <div class="home">
     <div>
-      <CellGroup title="基础用法">
-        <Cell title="单元格" value="内容" />
-        <Cell title="单元格" value="内容" label="描述信息" />
-      </CellGroup>
-      <CellGroup title="单元格大小">
-        <Cell title="单元格" value="内容" size="large" />
-        <Cell title="单元格" value="内容" size="large" label="描述信息" />
-      </CellGroup>
-      <CellGroup title="单元格大小">
-        <Cell title="单元格" value="内容" size="large" />
-        <Cell title="单元格" value="内容" size="large" label="描述信息" />
-      </CellGroup>
-      <CellGroup title="展示图标">
-        <Cell title="单元格" icon="location-o" value="内容"/>
-      </CellGroup>
-      <CellGroup title="日期">
-        <Cell title="选择单个日期" :value="date" @click="show = true" is-link />
-      </CellGroup>
+      <van-cell-group title="基础用法">
+        <van-cell title="单元格" value="内容" />
+        <van-cell title="单元格" value="内容" label="描述信息" />
+      </van-cell-group>
+      <van-cell-group title="单元格大小">
+        <van-cell title="单元格" value="内容" size="large" />
+        <van-cell title="单元格" value="内容" size="large" label="描述信息" />
+      </van-cell-group>
+      <van-cell-group title="单元格大小">
+        <van-cell title="单元格" value="内容" size="large" />
+        <van-cell title="单元格" value="内容" size="large" label="描述信息" />
+      </van-cell-group>
+      <van-cell-group title="展示图标">
+        <van-cell title="单元格" icon="location-o" value="内容"/>
+      </van-cell-group>
+      <van-cell-group title="日期">
+        <van-cell title="选择单个日期" :value="date" @click="show = true" is-link />
+      </van-cell-group>
     </div>
     <footer>
       <div class="button">
-        <vall-button type="default">默认按钮</vall-button>
-        <vall-button type="primary">主要按钮</vall-button>
+        <van-button type="default">默认按钮</van-button>
+        <van-button type="primary">主要按钮</van-button>
       </div>
     </footer>
-    <Calendar v-model="show" @confirm="onConfirm" />
+    <van-calendar v-model="show" @confirm="onConfirm" />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import { Button, CellGroup, Cell, Calendar } from "vant";
+import { Button, CellGroup, Cell, Calendar } from 'vant';
 
 export default {
-  name: "Home",
+  name: 'Home',
   components: {
-    "vall-button": Button,
-    CellGroup,
-    Cell,
-    Calendar
+    "van-button": Button,
+    "van-cell-group": CellGroup,
+    "van-cell": Cell,
+    "van-calendar": Calendar
   },
   data() {
     return {

@@ -15,29 +15,29 @@
 
 <script>
 // @ is an alias to /src
-import { Tabbar, TabbarItem } from "vant";
+import { Tabbar, TabbarItem } from 'vant';
 
 export default {
-  name: "Footer",
+  name: 'Footer',
   components: {
-    "van-tabbar": Tabbar,
-    "van-tabbar-item": TabbarItem
+    'van-tabbar': Tabbar,
+    'van-tabbar-item': TabbarItem
   },
   data() {
     return {
-      active: "home",
+      active: 'home',
       routerItem: {
         home: {
-          name: "首页",
-          icon: "wap-home-o"
+          name: '首页',
+          icon: 'wap-home-o'
         },
         about: {
-          name: "活动",
-          icon: "gem-o"
+          name: '活动',
+          icon: 'gem-o'
         },
         user: {
-          name: "我的",
-          icon: "user-o"
+          name: '我的',
+          icon: 'user-o'
         }
       }
     };

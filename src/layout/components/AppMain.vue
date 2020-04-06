@@ -9,7 +9,7 @@
 <script>
 
 export default {
-  name: "AppMain",
+  name: 'AppMain',
   data() {
     return {
       result: {}
@@ -20,7 +20,7 @@ export default {
   },
   computed: {
     key() {
-      return this.$route.name
+      return this.$route.path
     }
   },
   mounted() {},

@@ -17,14 +17,14 @@
 
 <script>
 // @ is an alias to /src
-import { NavBar, Toast, Icon } from "vant";
+import { NavBar, Toast, Icon } from 'vant';
 
 export default {
-  name: "Header",
+  name: 'Header',
   components: {
-    "van-navbar": NavBar,
+    'van-navbar': NavBar,
     //Toast,
-    "van-icon": Icon
+    'van-icon': Icon
   },
   data() {
     return {
