@@ -6,15 +6,15 @@
         <Cell title="单元格" value="内容" label="描述信息" />
       </CellGroup>
       <CellGroup title="单元格大小">
-        <van-cell title="单元格" value="内容" size="large" />
-        <van-cell title="单元格" value="内容" size="large" label="描述信息" />
+        <Cell title="单元格" value="内容" size="large" />
+        <Cell title="单元格" value="内容" size="large" label="描述信息" />
       </CellGroup>
       <CellGroup title="单元格大小">
-        <van-cell title="单元格" value="内容" size="large" />
-        <van-cell title="单元格" value="内容" size="large" label="描述信息" />
+        <Cell title="单元格" value="内容" size="large" />
+        <Cell title="单元格" value="内容" size="large" label="描述信息" />
       </CellGroup>
       <CellGroup title="展示图标">
-        <van-cell title="单元格" icon="location-o" value="内容"/>
+        <Cell title="单元格" icon="location-o" value="内容"/>
       </CellGroup>
       <CellGroup title="日期">
         <Cell title="选择单个日期" :value="date" @click="show = true" is-link />
@@ -22,8 +22,8 @@
     </div>
     <footer>
       <div class="button">
-        <Button type="default">默认按钮</Button>
-        <Button type="primary">主要按钮</Button>
+        <vall-button type="default">默认按钮</vall-button>
+        <vall-button type="primary">主要按钮</vall-button>
       </div>
     </footer>
     <Calendar v-model="show" @confirm="onConfirm" />
@@ -37,7 +37,7 @@ import { Button, CellGroup, Cell, Calendar } from "vant";
 export default {
   name: "Home",
   components: {
-    Button,
+    "vall-button": Button,
     CellGroup,
     Cell,
     Calendar

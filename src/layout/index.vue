@@ -29,9 +29,9 @@ export default {
 </script>
 
 <style lang="scss">
-#app-main {
+#layout {
   background-color: #f7f7f7;
   height: 100vh;
-  overflow: auto;
+  overflow: hidden;
 }
 </style>

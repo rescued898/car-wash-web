@@ -1,6 +1,6 @@
 <template>
   <div id="header">
-    <NavBar class="navbar"
+    <van-navbar class="navbar"
       title="nihao"
       :left-arrow="leftArrow"
       @click-left="onClickLeft"
@@ -11,18 +11,20 @@
     <template #right>
         <van-icon name="search"/> 
     </template>
-    </NavBar>
+    </van-navbar>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import { NavBar, Toast } from "vant";
+import { NavBar, Toast, Icon } from "vant";
 
 export default {
   name: "Header",
   components: {
-    NavBar
+    "van-navbar": NavBar,
+    //Toast,
+    "van-icon": Icon
   },
   data() {
     return {
@@ -32,6 +34,7 @@ export default {
   methods: {
     onClickLeft() {
       Toast('返回');
+      
     },
     onClickRight() {
       Toast('按钮');
@@ -42,10 +45,9 @@ export default {
 
 <style lang="scss">
 #header {
-    margin-bottom: 45.6px;
+    margin-bottom: 35px;
     color: white;
 }
-
 
 
 </style>

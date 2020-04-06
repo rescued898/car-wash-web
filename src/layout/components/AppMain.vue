@@ -20,7 +20,7 @@ export default {
   },
   computed: {
     key() {
-      return this.$route.path
+      return this.$route.name
     }
   },
   mounted() {},
@@ -32,7 +32,7 @@ export default {
 
 #app-main {
   background-color: #F7F7F7;
-  height: 100vh;
+  height: calc(100vh - 80px);
   overflow: auto;
 }
 

@@ -1,15 +1,15 @@
 <template>
   <div id="footer">
-    <Tabbar v-model="active" @change="onChange">
-      <TabbarItem
+    <van-tabbar v-model="active" @change="onChange">
+      <van-tabbar-item
         :icon="item.icon"
         :name="index"
         v-for="(item, index) in routerItem"
         :key="index"
       >
         {{ item.name }}
-      </TabbarItem>
-    </Tabbar>
+      </van-tabbar-item>
+    </van-tabbar>
   </div>
 </template>
 
@@ -20,8 +20,8 @@ import { Tabbar, TabbarItem } from "vant";
 export default {
   name: "Footer",
   components: {
-    Tabbar,
-    TabbarItem
+    "van-tabbar": Tabbar,
+    "van-tabbar-item": TabbarItem
   },
   data() {
     return {
@@ -44,7 +44,6 @@ export default {
   },
   methods: {
     onChange: function(e) {
-      console.log("e", e);
       this.$router.replace({ path: e });
     }
   }
@@ -53,6 +52,6 @@ export default {
 
 <style lang="scss">
 #footer {
-  margin-top: 50px;
+  margin-top: 45px;
 }
 </style>
