@@ -1,52 +1,42 @@
 <template>
   <div class="user">
     <div>
-      <van-cell-group title="基础用法">
-        <van-cell title="单元格" value="内容" />
-        <van-cell title="单元格" value="内容" label="描述信息" />
+      <van-cell-group title="个人中心">
+        <van-cell title="手机号" is-link :value="mobile" />
+        <van-cell title="车辆管理" is-link />
+        <van-cell title="收货地址" is-link />
+        <van-cell title="账户余额" is-link :value="`${amount}元`" />
+        <van-cell title="自助洗车券" is-link :value="`${coupon}张`" />
       </van-cell-group>
-      <van-cell-group title="单元格大小">
-        <van-cell title="单元格" value="内容" size="large" />
-        <van-cell title="单元格" value="内容" size="large" label="描述信息" />
+      <van-cell-group title="记录">
+        <van-cell title="充值记录" value="内容" is-link />
+        <van-cell title="消费记录" value="内容" is-link />
       </van-cell-group>
-      <van-cell-group title="单元格大小">
-        <van-cell title="单元格" icon="location-o" value="内容" />
-      </van-cell-group>
-      <van-cell-group title="日期">
-        <van-cell
-          title="选择单个日期"
-          :value="date"
-          @click="show = true"
-          is-link
-        />
+      <van-cell-group title="其他">
+        <van-cell title="扫描二维码" is-link />
+        <van-cell title="电子兑换码" is-link />
       </van-cell-group>
     </div>
-    <footer>
-      <div class="button">
-        <van-button type="default">默认按钮</van-button>
-        <van-button type="primary">主要按钮</van-button>
-      </div>
-    </footer>
-    <van-calendar v-model="show" @confirm="onConfirm" />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import { Button, CellGroup, Cell, Calendar } from 'vant';
+import { CellGroup, Cell } from 'vant';
 
 export default {
-  name: "User",
+  name: 'User',
   components: {
-    "van-button": Button,
-    "van-cell-group": CellGroup,
-    "van-cell": Cell,
-    "van-calendar": Calendar
+    'van-cell-group': CellGroup,
+    'van-cell': Cell,
   },
   data() {
     return {
-      date: "",
+      date: '',
       show: false,
+      mobile: 15659565565,
+      coupon: 12,
+      amount: 200,
     };
   },
   methods: {

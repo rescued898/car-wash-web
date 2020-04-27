@@ -4,6 +4,7 @@ import Layout from '@/layout'
 
 import Login from '@/views/login'
 import Home from '@/views/home'
+import Package from '@/views/home/package'
 import About from '@/views/about'
 import User from '@/views/user'
 
@@ -13,32 +14,60 @@ export const constantRoutes = [
 
   {
     path: '/',
-    name: 'Layout',
     component: Layout,
     redirect:'home',
     children: [
       {
         path: 'home',
         name: 'Home',
-        component: Home
+        component: Home,
+        meta: { title: '首页', 'isTop': true }
       },
+      {
+        path: 'package',
+        name: 'Package',
+        component: Package,
+        meta: { title: '优惠券' }
+      },
+    ]
+  },
+  {
+    path: '/',
+    component: Layout,
+    redirect:'about',
+    children: [
       {
         path: 'about',
         name: 'About',
-        component: About
-      },
+        component: About,
+        meta: { title: '关于', 'isTop': true }
+      }
+    ]
+  },
+  {
+    path: '/abouta',
+    name: 'Abouta',
+    component: About,
+    meta: { title: '关于', 'isTop': true }
+  },
+  {
+    path: '/',
+    component: Layout,
+    redirect:'user',
+    children: [
       {
         path: 'user',
         name: 'User',
-        component: User
-      },
-      
+        component: User,
+        meta: { title: '我的', 'isTop': true }
+      }
     ]
   },
   {
     path: '/login',
     name: 'login',
     component: Login,
+    meta: { title: '登录' }
   }
   // {
   //   path: '/ho',

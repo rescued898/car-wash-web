@@ -3,6 +3,15 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
+import VueAMap from 'vue-amap';
+Vue.use(VueAMap);
+VueAMap.initAMapApiLoader({
+  key: '80f9f688ce293588f41cb949a09c3b9f',
+  plugin: ['AMap.Autocomplete', 'AMap.PlaceSearch', 'AMap.Scale', 'AMap.OverView', 'AMap.ToolBar', 'AMap.MapType', 'AMap.PolyEditor', 'AMap.CircleEditor','Geocoder'],
+  // 默认高德 sdk 版本为 1.4.4
+  v: '1.4.4'
+});
+
 //import '@/styles/index.scss'
 
 //方式三. 导入所有组件

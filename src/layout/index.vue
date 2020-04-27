@@ -1,25 +1,25 @@
 <template>
   <div id="layout">
-    <Header />
+    <Navbar />
     <AppMain />
-    <Footer />
+    <Tabbar />
   </div>
 </template>
 
 <script>
 
-import { AppMain, Header, Footer } from './components'
+import { AppMain, Navbar, Tabbar } from './components'
 
 export default {
   name: "Layout",
   data() {
     return {
-      result: {}
+      
     };
   },
   components: {
-    Header,
-    Footer,
+    Navbar,
+    Tabbar,
     AppMain
   },
   computed: {},
