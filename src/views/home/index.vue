@@ -8,7 +8,7 @@
         <van-grid-item icon="gold-coin" text="充值" /> -->
       </van-grid>
     </div>
-    <van-tabs v-model="active">
+    <van-tabs v-model="active" color="#1989fa">
       <van-tab title="地图模式">
         <div class="amap">
           <Amap />
