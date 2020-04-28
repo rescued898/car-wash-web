@@ -1,6 +1,6 @@
 <template>
   <div id="layout">
-    <Navbar />
+    <!-- <Navbar /> -->
     <AppMain />
     <Tabbar />
   </div>
@@ -8,7 +8,7 @@
 
 <script>
 
-import { AppMain, Navbar, Tabbar } from './components'
+import { AppMain, Tabbar } from './components'
 
 export default {
   name: "Layout",
@@ -18,7 +18,7 @@ export default {
     };
   },
   components: {
-    Navbar,
+    // Navbar,
     Tabbar,
     AppMain
   },

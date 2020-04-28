@@ -1,36 +1,51 @@
 <template>
   <div class="home">
     <div>
-      <van-row type="flex" justify="center" align="center">
-        <van-col span="8">span: 8</van-col>
-        <van-col span="8">span: 8</van-col>
-        <van-col span="8">span: 8</van-col>
-      </van-row>
+      <van-grid :column-num="2" >
+        <van-grid-item icon="scan" text="洗车" />
+        <van-grid-item icon="gold-coin" text="充值" />
+        <!-- <van-grid-item icon="scan" text="洗车" />
+        <van-grid-item icon="gold-coin" text="充值" /> -->
+      </van-grid>
     </div>
-    <Amap />
+    <van-tabs v-model="active">
+      <van-tab title="地图模式">
+        <div class="amap">
+          <Amap />
+        </div>
+      </van-tab>
+      <van-tab title="列表模式">
+        <div class="test">
+          内容 2
+        </div>
+      </van-tab>
+    </van-tabs>
+    
+    
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import { Row, Col } from 'vant';
+import { Grid, GridItem } from 'vant';
+import { Tab, Tabs } from 'vant';
+// import { Col, Row } from 'vant';
 import Amap from '@/components/Amap';
 
 export default {
   name: 'Home',
   components: {
-    // "van-button": Button,
-    // "van-cell-group": CellGroup,
-    // "van-cell": Cell,
-    // "van-calendar": Calendar,
-    'van-row': Row,
-    'van-col': Col,
+    'van-tab': Tab,
+    'van-tabs': Tabs,
+    'van-grid': Grid,
+    'van-grid-item': GridItem,
     Amap,
   },
   data() {
     return {
       date: '',
       show: false,
+      active: 0,
     };
   },
   methods: {
@@ -48,25 +63,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
-// footer {
-//   font-family: Avenir, Helvetica, Arial, sans-serif;
-//   -webkit-font-smoothing: antialiased;
-//   -moz-osx-font-smoothing: grayscale;
-//   text-align: center;
-//   color: #2c3e50;
-// }
+<style lang="scss" scoped>
 
-// .button {
-//   padding: 30px;
 
-//   a {
-//     font-weight: bold;
-//     color: #2c3e50;
-
-//     &.router-link-exact-active {
-//       color: #42b983;
-//     }
-//   }
-// }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div id="footer">
-    <van-tabbar v-model="active" fixed placeholder  @change="onChange">
+    <van-tabbar v-model="active"  placeholder  @change="onChange">
       <van-tabbar-item
         v-for="(item, index) in routerItem"
         :key="index"

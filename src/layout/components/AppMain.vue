@@ -32,7 +32,7 @@ export default {
 
 #app-main {
   background-color: #F7F7F7;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 50px);
   overflow: auto;
 }
 
