@@ -22,7 +22,7 @@
         },
         methods: {
             initAMap() {
-                let _this = this;
+                // let _this = this;
                 AMapLoader.load({
                     key: '80f9f688ce293588f41cb949a09c3b9f', // 申请好的Web端开发者Key，首次调用 load 时必填
                     version: '2.0', // 指定要加载的 JSAPI 的版本，缺省时默认为 1.4.15
@@ -35,7 +35,7 @@
                         });
                         // 创建 AMap.Icon 实例：
                         let icon = new AMap.Icon({
-                            size: new AMap.Size(200, 200), // 图标尺寸
+                            size: new AMap.Size(30, 30), // 图标尺寸  注意：点坐标事件的点击有效范围是按size计算,而不是imagesize
                             image: carIcon, // Icon的图像
                             // imageOffset: new AMap.Pixel(0, -60), // 图像相对展示区域的偏移量，适于雪碧图等
                             imageSize: new AMap.Size(30, 30), // 根据所设置的大小拉伸或压缩图片
@@ -63,28 +63,31 @@
                                 icon: icon, // 添加 Icon 图标 URL,
                                 clickable: true  // 点标记是否可点击
                             });
-                            marker.on('mousedown', function(e){
+                            marker.testid  = item[0]
+                            marker.on('click', function(e){
+                                console.log(e.target.testid ); 
                                 console.log(e)
+                                
                             })
                             markerObj.push(marker)
                         })
-                        
                         this.map.add(markerObj);  // 点标记组加入地图
 
                         // 定位
-                        let geolocation = new AMap.Geolocation({
-                            showMarker: true,
-                            enableHighAccuracy: true,
-                            zoomToAccuracy: true,
-                        });
-                        geolocation.getCurrentPosition(function (status, result) {
-                            if (status == 'complete') {
-                                _this.onComplete(result);
-                            } else {
-                                _this.onError(result);
-                            }
-                        });
-                        this.map.addControl(geolocation); // 插件对象加入地图使用的是 addControl 方法
+                        // let geolocation = new AMap.Geolocation({
+                        //     showMarker: true,
+                        //     enableHighAccuracy: true,
+                        //     zoomToAccuracy: true,
+                        // });
+                        // geolocation.getCurrentPosition(function (status, result) {
+                        //     if (status == 'complete') {
+                        //         _this.onComplete(result);
+                        //     } else {
+                        //         _this.onError(result);
+                        //     }
+                        // });
+                        // 插件对象加入地图使用的是 addControl 方法
+                        // this.map.addControl(geolocation); 
                     })
                     .catch((e) => {
                         console.log(e);
